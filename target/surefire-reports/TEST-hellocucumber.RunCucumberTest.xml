@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="hellocucumber.RunCucumberTest" time="0.052" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="hellocucumber.RunCucumberTest" time="0.066" errors="0" skipped="6">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\bin"/>
@@ -65,9 +65,55 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Is it Friday yet?" name="Sunday isn&apos;t Friday" time="0.017"/>
-  <testcase classname="Is it Friday yet?" name="Today is or is not Friday" time="0.011"/>
-  <testcase classname="Is it Friday yet?" name="Today is or is not Friday" time="0.007"/>
-  <testcase classname="Is it Friday yet?" name="Today is or is not Friday" time="0.005"/>
-  <testcase classname="Is it Friday yet?" name="Today is or is not Friday" time="0.012"/>
+  <testcase classname="Le message s affiche t il bien" name="Un utilisateur veut afficher un message a l ecran" time="0.019">
+    <skipped/>
+    <system-out>Feature: Le message s affiche t il bien
+  On analyse si le message a bien été afficher sur l&apos;écran
+
+  Scenario Outline: Un utilisateur veut afficher un message a l ecran &amp;#27;[90m# hellocucumber/testMessageUser.feature:4&amp;#27;[0m
+    &amp;#27;[36mGiven Son message est &quot;&lt;message&gt;&quot;&amp;#27;[0m
+    &amp;#27;[36mWhen Je lui demande d ecrire un message&amp;#27;[0m
+    &amp;#27;[36mThen Il a frappe sur son clavier et a ecris un message vide &quot;&lt;messageAff&gt;&quot;&amp;#27;[0m
+
+    Examples: 
+
+  Scenario Outline: Un utilisateur veut afficher un message a l ecran     &amp;#27;[90m# hellocucumber/testMessageUser.feature:11&amp;#27;[0m
+Il a écrit : J&apos;ai écris mon premier message. !!
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mSon message est &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;Bonjour&quot;&amp;#27;[0m                                       &amp;#27;[90m# StepDefinitions.messageUser(String)&amp;#27;[0m
+    &amp;#27;[33mWhen &amp;#27;[0m&amp;#27;[33mJe lui demande d ecrire un message&amp;#27;[0m                               &amp;#27;[90m# null&amp;#27;[0m
+    &amp;#27;[33mThen &amp;#27;[0m&amp;#27;[33mIl a frappe sur son clavier et a ecris un message vide &quot;Bonjour&quot;&amp;#27;[0m &amp;#27;[90m# null&amp;#27;[0m
+</system-out>
+    <system-err>janv. 10, 2020 9:13:27 AM cucumber.runtime.model.FeatureBuilder parse
+AVERTISSEMENT: Duplicate feature ignored. classpath:hellocucumber/testMessageUser.feature was identical to classpath:hellocucumber/testMessageUser.feature
+</system-err>
+  </testcase>
+  <testcase classname="Le message s affiche t il bien" name="Un utilisateur veut afficher un message a l ecran" time="0.019">
+    <skipped/>
+  </testcase>
+  <testcase classname="Le message s affiche t il bien" name="Un utilisateur veut afficher un message a l ecran" time="0.008">
+    <skipped/>
+    <system-out>
+  Scenario Outline: Un utilisateur veut afficher un message a l ecran             &amp;#27;[90m# hellocucumber/testMessageUser.feature:12&amp;#27;[0m
+Il a écrit : J&apos;ai écris mon premier message. !!
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mSon message est &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;&quot;&amp;#27;[0m                                                      &amp;#27;[90m# StepDefinitions.messageUser(String)&amp;#27;[0m
+    &amp;#27;[33mWhen &amp;#27;[0m&amp;#27;[33mJe lui demande d ecrire un message&amp;#27;[0m                                       &amp;#27;[90m# null&amp;#27;[0m
+    &amp;#27;[33mThen &amp;#27;[0m&amp;#27;[33mIl a frappe sur son clavier et a ecris un message vide &quot;Rien a afficher&quot;&amp;#27;[0m &amp;#27;[90m# null&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="Le message s affiche t il bien" name="Un utilisateur veut afficher un message a l ecran" time="0.008">
+    <skipped/>
+  </testcase>
+  <testcase classname="Le message s affiche t il bien" name="Un utilisateur veut afficher un message a l ecran" time="0.006">
+    <skipped/>
+    <system-out>
+  Scenario Outline: Un utilisateur veut afficher un message a l ecran            &amp;#27;[90m# hellocucumber/testMessageUser.feature:13&amp;#27;[0m
+Il a écrit : J&apos;ai écris mon premier message. !!
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mSon message est &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;anything else!&quot;&amp;#27;[0m                                       &amp;#27;[90m# StepDefinitions.messageUser(String)&amp;#27;[0m
+    &amp;#27;[33mWhen &amp;#27;[0m&amp;#27;[33mJe lui demande d ecrire un message&amp;#27;[0m                                      &amp;#27;[90m# null&amp;#27;[0m
+    &amp;#27;[33mThen &amp;#27;[0m&amp;#27;[33mIl a frappe sur son clavier et a ecris un message vide &quot;anything else!&quot;&amp;#27;[0m &amp;#27;[90m# null&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="Le message s affiche t il bien" name="Un utilisateur veut afficher un message a l ecran" time="0.006">
+    <skipped/>
+  </testcase>
 </testsuite>

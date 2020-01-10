@@ -7,25 +7,28 @@ import io.cucumber.java.en.When;
 import static org.junit.Assert.*;
 
 public class StepDefinitions {
-	@Given("today is Sunday")
-	public void today_is_Sunday() {
-	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("Yet Sunday");
+
+	//-----------------------------------------------------------------------
+	@Given("Son message est {string}")
+	public void messageUser(String string) {
+		string = "J'ai écris mon premier message.";
+		if (string != ""){
+		    // Write code here that turns the phrase above into concrete actions
+			System.out.println("Il a écrit : "+string+" !!");
+		}
+
 	}
-	@Given("today is {string}")
-	public void today_is_Answer(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("Yet "+string+" !!");
-	}
-	@When("I ask whether it's Friday yet")
-	public void i_ask_whether_it_s_Friday_yet() {
+	@When("Je lui demande d'écrire un message")
+	public void demandeEcriture() {
 	    // Write code here that turns the phrase above into concrete actions
 	    System.out.println("Yet Friday");
 	}
 
-	@Then("I should be told {string}")
-	public void i_should_be_told(String string) {
+	@Then("Il a frappé sur son clavier et a écris un message vide {string}")
+	public void messageAAfficher(String string) {
+		string = "C'est Trop Bien !!";
 	    // Write code here that turns the phrase above into concrete actions
-	    System.out.println("Toldtold");
+	    System.out.println("Message de l'utilisateur : "+string);
 	}
+	//-----------------------------------------------------------------------
 }
